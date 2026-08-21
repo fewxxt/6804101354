@@ -1,10 +1,13 @@
 <template>
   <q-page class="q-pa-md">
     <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md" style="max-width: 600px">
+      <!-- คงข้อความภาษาไทยไว้ -->
       <q-input filled v-model="name" label="Your name (ชื่อ-สกุล) *" hint="Name and surname" />
       <q-input filled type="number" v-model="age" label="Your age (อายุ) *" />
       
-      <q-toggle v-model="accept" label="I accept the license and terms" />
+      <!-- รวมภาษาจีนเข้ากับภาษาไทย หรือใช้ข้อความภาษาจีนตามที่รวมมา -->
+      <q-toggle v-model="accept" label="I accept the license and terms (我接受许可และ条款语言)" />
+      
       <div>
         <q-btn label="SUBMIT" type="submit" color="primary" />
         <q-btn label="RESET" type="reset" color="primary" flat class="q-ml-sm" />
